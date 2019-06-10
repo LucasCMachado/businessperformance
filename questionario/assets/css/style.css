@@ -1,0 +1,292 @@
+/*
+Template Name: Split
+Author: One Page Love
+Author URI: https://onepagelove.com
+Template URI: https://onepagelove.com/split
+Description: Split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content.
+*/
+/* -- CSS Reset -- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+@import url("https://fonts.googleapis.com/css?family=Lora");
+
+@font-face {
+    font-family: gothamLeve;
+    src: url(../../fonts/Gotham-Light-Regular.otf);
+}
+
+@font-face {
+    font-family: gothamDark;
+    src: url(../../fonts/Gotham-Black.otf);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+  margin: 0; }
+
+img.alignright {
+  float: right; }
+
+img.alignleft {
+  float: left; }
+
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+body {
+  background-color: #FFFFFF;
+  border-style: none; }
+
+body,
+p,
+a,
+a:hover {
+  color: #000000; }
+
+a,
+a:hover {
+  text-decoration: none;
+  border: none;
+  border-style: none;
+  box-shadow: none; }
+
+/* -- Content -- */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+html {
+  background-color: #00416f; }
+
+label{
+  font-size: 15px;
+  font-family: 'gothamLeve', serif;}
+
+form{
+  margin: 10px;
+}
+
+input{
+  border: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+button{
+  border: none;
+  padding: 15px 15px;
+  margin-top: 20px;
+  width: 40%;
+  border-radius: 3px;
+  vertical-align: center;
+  background-color: #F8E000;
+  font-size: 1em;
+  color: #0B3D64;
+  font-family: 'gothamDark', sans-serif;
+}
+
+.download{
+  border: none;
+  padding: 15px 15px;
+  margin-top: 20px;
+  width: 40%;
+  border-radius: 3px;
+  vertical-align: center;
+  background-color: #F8E000;
+  font-size: 1em;
+  color: #0B3D64;
+  font-family: 'gothamDark', sans-serif;
+}
+
+.download:hover {
+  color: #0B3D64;
+}
+
+body.page-template-page-fullsingle {
+  background-color: #00416f;
+  font-family: 'gothamDark', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 33px;
+  letter-spacing: -0.2px;
+  color: #FFFFFF;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s; }
+  body.page-template-page-fullsingle p {
+    color: #FFFFFF; 
+    font-family: 'gothamLeve', serif; }
+
+.fs {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 800px) {
+    .fs {
+      height: auto;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  .fs .image {
+    width: 50%;
+    height: 100vh;
+    background-image: url("../../images/background.jpg");
+    background-position: center center;
+    background-size: cover; }
+    @media (max-width: 800px) {
+      .fs .image {
+        height: 80vh;
+        width: 100%; } }
+  .fs .content {
+    width: 50%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: auto; }
+    @media (max-width: 800px) {
+      .fs .content {
+        width: 100%;
+        height: auto; } }
+    .fs .content .content-vertically-center {
+      padding: 80px;
+      max-width: 640px;
+      margin-top: auto;
+      margin-bottom: auto; }
+      @media (max-width: 1200px) {
+        .fs .content .content-vertically-center {
+          padding: 60px; } }
+      @media (max-width: 800px) {
+        .fs .content .content-vertically-center {
+          padding: 40px; } }
+
+.intro {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: -2px; }
+  .intro h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 40px;
+    letter-spacing: 0.4px;
+    color: #47bec7; }
+  .intro .tagline {
+    color: #FFFFFF; }
+
+.bio {
+  padding: 40px 0 40px 0;
+  font-family: 'gothamLeve', serif; }
+  @media (max-width: 1200px) {
+    .bio {
+      padding: 30px 0; } }
+  @media (max-width: 800px) {
+    .bio {
+      padding: 20px 0; } }
+  .bio p {
+    color: #FFFFFF; }
+  .bio a {
+    color: #FFFFFF;
+    transition-duration: 0.5s;
+    border-bottom: 1px dotted #FFFFFF; }
+    .bio a:hover {
+      color: #CA486d;
+      transition-duration: 0.1s;
+      border-bottom: 1px dotted #CA486d; }
+
+.lists .list {
+  width: 30%;
+  display: inline-block;
+  margin-bottom: 40px; }
+  @media (max-width: 500px) {
+    .lists .list {
+      width: 90%; } }
+  .lists .list h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 31px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    opacity: 0.5; }
+  .lists .list ul li {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 12px; }
+    .lists .list ul li a {
+      color: #FFFFFF;
+      transition-duration: 0.5s; }
+      .lists .list ul li a:hover {
+        color: #CA486d;
+        transition-duration: 0.1s; }
+
+.credit {
+  opacity: 0.4; }
+  .credit p {
+    font-size: 12px;
+    line-height: 14px; }
+    .credit p a {
+      color: #FFFFFF; }

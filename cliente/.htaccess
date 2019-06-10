@@ -1,0 +1,53 @@
+#AddHandler php7-script .php
+#suPHP_ConfigPath /home/disabores
+
+DirectoryIndex login.php index.php
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteRule ^listar-assessments/?$ /listar.php [NC,L]
+  RewriteRule ^login/?$ /login.php [NC,L]
+  RewriteRule ^entrar/?$ /entrar.php [NC,L]
+  
+  #Formacao Assessments
+  RewriteRule ^formacao-([0-9]+)-([0-9]+)/?$ /cliente/assessment_formacao.php?formacao=$1&acesso=$2 [NC]
+  RewriteRule ^ass-formacao-([0-9]+)-([0-9]+)-([a-z0-9-]+)/?$ /cliente/listar_formacao.php?turma=$1&acesso=$2&token_cliente=$3 [NC]
+
+  #Passar dados por url
+  RewriteRule ^editar-album-([0-9]+)/?$ /editar_album.php?id=$1 [NC]
+   
+  # Página de exibição de um produto
+  RewriteRule ^artigo/([a-z0-9-]+)/([0-9]+)/?$ /artigo.php?id=$3&nome=$2&categoria=$1 [NC]
+
+  #Acesso primeiro cadastro
+  RewriteRule ^acesso-([0-9]+)-([0-9]+)-([a-z0-9-]+)-([0-9]+)/?$ /cliente/listar.php?formacao=$1&turma=$2&token_cliente=$3&acesso=$4 [NC,L]
+  
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/atom_xml
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+AddOutputFilterByType DEFLATE application/x-httpd-eruby
+AddOutputFilterByType DEFLATE text/html
+
+SetOutputFilter DEFLATE
+
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+
+BrowserMatch ^HMSI[E] !no-gzip !gzip-only-text/html
+
+SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
+</IfModule>
