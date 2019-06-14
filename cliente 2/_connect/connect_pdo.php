@@ -40,7 +40,7 @@ class Database
 
         $db_usuario = "root";
 
-        $db_senha = "";
+        $db_senha = "123";
 
         $db_driver = "mysql";
 
