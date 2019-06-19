@@ -36,7 +36,7 @@ $pagename="Lista Diária";
 									<!-- START LOGO -->
 									<a href="index.html">
 										<div class="logo">
-											<img src="../assets/img/tr.png" alt="">
+											<img src="assets/img/tr.png" alt="">
 										</div>
 										<h1 class="brand-text"></h1>
 									</a>
@@ -58,122 +58,106 @@ $pagename="Lista Diária";
 				<header class="page-header">
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
-							<h1>Listagem de Transfêrencias Diárias</h1>
+							<h1>Minhas Formações</h1>
 						</div>
 					</div>
 				</header>
 				<!--END PAGE HEADER -->
 				<!--START PAGE CONTENT -->
 				<section class="page-content">
-						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<h5 class="card-header">Cadastrar</h5>
-									<div class="card-body">
-										<form class="form-inline">
-											<label class="sr-only" for="ramal_transferidor">Ramal</label>
-											<input type="text" class="form-control mb-2 mr-sm-2" id="ramal_transferidor" placeholder="Ramal Técnico">
-
-											<div class="form-check mb-2 mr-sm-2">
-												<div class="custom-control custom-checkbox checkbox-primary">
-													  <input type="checkbox" class="custom-control-input" id="customCheck1">
-													  <label class="custom-control-label" for="customCheck1">Não aparece ramal</label>
+					<div class="row">
+						<div class="col-12">
+							<div class="card">
+								<h5 class="card-header">Formações</h5>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-3">
+											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+												<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Em andamento</a>
+												<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Finalizadas</a>
+												<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Canceladas</a>
+											</div>
+										</div>
+										<div class="col-9">
+											<div class="tab-content" id="v-pills-tabContent">
+												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+													<div class="col-sm-12 col-md-6 col-xl-3">
+														<div class="card">
+															<div class="card-content">
+																<img class="card-img-top img-fluid" src="./assets/img/demos/31.jpg" alt="Card image cap">
+																<div class="card-body">
+																	<h4 class="card-title">NOME FORMACAO EM ANDAMENTO</h4>
+																	<p class="card-text">DATA DE INICIO</p>
+																	<a href="#" class="btn btn-primary">Acessar</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+													<div class="col-sm-12 col-md-6 col-xl-3">
+														<div class="card">
+															<div class="card-content">
+																<img class="card-img-top img-fluid" src="./assets/img/demos/31.jpg" alt="Card image cap">
+																<div class="card-body">
+																	<h4 class="card-title">NOME FORMACAO FINALIZADA</h4>
+																	<p class="card-text">DATA DE INICIO</p>
+																	<a href="#" class="btn btn-primary">Acessar</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+													<div class="col-sm-12 col-md-6 col-xl-3">
+														<div class="card">
+															<div class="card-content">
+																<img class="card-img-top img-fluid" src="./assets/img/demos/31.jpg" alt="Card image cap">
+																<div class="card-body">
+																	<h4 class="card-title">NOME FORMACAO CANCELADA</h4>
+																	<p class="card-text">DATA DE INICIO</p>
+																	<a href="#" class="btn btn-primary">Acessar</a>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
-
-											<label class="sr-only" for="nome_tecnico">Nome</label>
-											<div class="input-group mb-2 mr-sm-2" style="display: none;">
-												<div class="input-group-prepend">
-													<div class="input-group-text">@</div>
-												</div>
-												<input type="text" class="form-control" id="nome_tecnico" placeholder="Nome Técnico">
-											</div>
-											<label class="sr-only" for="ramal_transferidor">Fila incorreta</label>
-											<input type="text" class="form-control mb-2 mr-sm-2" id="ramal_transferidor" placeholder="Fila incorreta">
-											<label class="sr-only" for="ramal_transferidor">Fila Correta</label>
-											<input type="text" class="form-control mb-2 mr-sm-2" id="ramal_transferidor" placeholder="Fila Correta">
-											<label class="sr-only" for="ramal_transferidor">Assunto</label>
-											<input type="text" class="form-control mb-2 mr-sm-2" id="ramal_transferidor" placeholder="Assunto">
-
-											<button type="submit" class="btn btn-primary mb-2">Salvar</button>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<h5 class="card-header">Lista de transferências</h5>
-									<div class="card-body">
-										<table id="bs4-table" class="table table-striped table-bordered" style="width:100%">
-											<thead>
-												<tr>
-													<th>Ramal</th>
-													<th>Fila Errada</th>
-													<th>Fila Certa</th>
-													<th>Data</th>
-													<th>Hora</th>
-													<th>Ações</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1217481</td>
-													<td>43</td>
-													<td>41</td>
-													<td>20/03/2019</td>
-													<td>11:53:15h</td>
-													<td>
-														<button class="btn btn-primary btn-rounded">Editar</button>
-														<button class="btn btn-primary btn-rounded">Remover</button>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<th>Ramal</th>
-													<th>Fila Errada</th>
-													<th>Fila Certa</th>
-													<th>Data</th>
-													<th>Hora</th>
-													<th>Ações</th>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
+					</div>
+				</section>
                 <!--END PAGE CONTENT -->
             </div>
         </div>
         <!-- END CONTENT WRAPPER -->
-        <!-- ================== GLOBAL VENDOR SCRIPTS ==================-->
-        <script src="../assets/vendor/modernizr/modernizr.custom.js"></script>
-        <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/vendor/js-storage/js.storage.js"></script>
-        <script src="../assets/vendor/js-cookie/src/js.cookie.js"></script>
-        <script src="../assets/vendor/pace/pace.js"></script>
-        <script src="../assets/vendor/metismenu/dist/metisMenu.js"></script>
-        <script src="../assets/vendor/switchery-npm/index.js"></script>
-        <script src="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!-- ================== GLOBAL VENDOR SCRIPTS ==================-->
+        <script src="assets/vendor/modernizr/modernizr.custom.js"></script>
+        <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/js-storage/js.storage.js"></script>
+        <script src="assets/vendor/js-cookie/src/js.cookie.js"></script>
+        <script src="assets/vendor/pace/pace.js"></script>
+        <script src="assets/vendor/metismenu/dist/metisMenu.js"></script>
+        <script src="assets/vendor/switchery-npm/index.js"></script>
+        <script src="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
         <!-- ================== PAGE LEVEL VENDOR SCRIPTS ==================-->
-        <script src="../assets/vendor/countup.js/dist/countUp.min.js"></script>
-        <script src="../assets/vendor/chart.js/dist/Chart.bundle.min.js"></script>
-        <script src="../assets/vendor/flot/jquery.flot.js"></script>
-        <script src="../assets/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-        <script src="../assets/vendor/flot/jquery.flot.resize.js"></script>
-        <script src="../assets/vendor/flot/jquery.flot.time.js"></script>
-        <script src="../assets/vendor/flot.curvedlines/curvedLines.js"></script>
-        <script src="../assets/vendor/datatables.net/js/jquery.dataTables.js"></script>
-        <script src="../assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+        <script src="assets/vendor/countup.js/dist/countUp.min.js"></script>
+        <script src="assets/vendor/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="assets/vendor/flot/jquery.flot.js"></script>
+        <script src="assets/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+        <script src="assets/vendor/flot/jquery.flot.resize.js"></script>
+        <script src="assets/vendor/flot/jquery.flot.time.js"></script>
+        <script src="assets/vendor/flot.curvedlines/curvedLines.js"></script>
+        <script src="assets/vendor/datatables.net/js/jquery.dataTables.js"></script>
+        <script src="assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
         <!-- ================== GLOBAL APP SCRIPTS ==================-->
-        <script src="../assets/js/global/app.js"></script>
+        <script src="assets/js/global/app.js"></script>
         <!-- ================== PAGE LEVEL SCRIPTS ==================-->
-        <script src="../assets/js/components/datatables-init.js"></script>
+        <script src="assets/js/components/datatables-init.js"></script>
     </body>
 
     </html>
